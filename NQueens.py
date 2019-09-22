@@ -1,4 +1,3 @@
-# MODELAGEM DO PROBLEMA DE N-RAINHAS
 from random import choice
 from collections import Counter
 from random import randrange
@@ -72,6 +71,3 @@ class NQueens():
                     aux[row] = col  # Troca a coluna para a vazia
                     states.append(list(aux))  # E inclui na lista states
         return states
-    
-    def random_near_state(self, state):
-        return choice(self.near_states(state))
