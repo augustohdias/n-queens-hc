@@ -1,14 +1,15 @@
 from time import time
 
-def search(problem, algorithm, i):
-    n_iterations = i
-    cnt = 0
+def search(problem, algorithm):
+    n = 0
     start = time()
     s = []
-    for i in range(n_iterations):
+    while True:
+        n += 1 
         result = algorithm(problem)
         if problem.heuristic(result) is 0:
-            cnt += 1
             s.append(result)
-    print("Soluções/Tentativas: %2d/%d\nTempo de execução: %f" % (cnt, n_iterations, time() - start))
-    return s 
+            break
+    t = time() - start
+    print("\nTentativas Totais: {}\nTempo de execução: {}".format(n, t))
+    return s, n, t
