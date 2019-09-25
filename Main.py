@@ -5,8 +5,8 @@ from NQueens import NQueens
 
 
 if __name__ == "__main__":
-    problem = NQueens(12)
-    iterations = 1000
+    problem = NQueens(8)
+    iterations = 10
     
     total_trials = []
     total_time = 0

@@ -31,8 +31,8 @@ class NQueens():
             for key in counter:
                 h += int(counter[key] * (counter[key] - 1) / 2)
         
-        # print("\nNúmero de ataques: {}".format(h))
-        # print_board([state])
+        print("\nNúmero de ataques: {}".format(h))
+        print_board([state])
         
         return h
 

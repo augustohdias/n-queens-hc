@@ -8,7 +8,11 @@ def algorithm(problem):
         
         neighbour = min(neighbours, key=lambda state: problem.heuristic(state))
 
-        if problem.heuristic(neighbour) >= problem.heuristic(current):
+        print("\n\nEstado vizinho:")
+        n = problem.heuristic(neighbour)
+        print("\n\nEstado corrente:")
+        c = problem.heuristic(current)
+        if n >= c:
             break
         current = neighbour
     return current
